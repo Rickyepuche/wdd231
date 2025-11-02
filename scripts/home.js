@@ -152,20 +152,33 @@ function displayWdd(){
     theCredits.textContent = totalCredits;
 }
 
+function setActiveButton(activeId) {
+    // Remove active class from all buttons
+    document.querySelectorAll('.specific').forEach(button => {
+        button.classList.remove('active');
+    });
+    // Add active class to the clicked button
+    document.querySelector(`#${activeId}`).classList.add('active');
+}
+
 document.querySelector("#All").addEventListener("click", function (event) {
     event.preventDefault();
+    setActiveButton('All');
     displayAll();
 });
 
 document.querySelector("#CSE").addEventListener("click", function (event) {
     event.preventDefault();
+    setActiveButton('CSE');
     displayCse();
 });
 
 document.querySelector("#WDD").addEventListener("click", function (event) {
     event.preventDefault();
+    setActiveButton('WDD');
     displayWdd();
 });
 
-// Display all courses when the page loads
+// Display all courses when the page loads and set All button as active
 displayAll();
+setActiveButton('All');

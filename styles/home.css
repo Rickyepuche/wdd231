@@ -162,6 +162,12 @@ article{
     background: rgb(87, 84, 84);
 }
 
+.specific.active {
+    background: rgb(87, 84, 84);
+    border: 4px solid burlywood;
+    color: white;
+}
+
 .listed-courses{
     display: grid;
     grid-template-columns: 1fr;
