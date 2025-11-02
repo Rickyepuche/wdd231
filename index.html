@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Richard Edigin">
+    <meta name="description" content="This is the home page for the student Richard Edigin for the Web Certificate Program. My project will be linked here. I have some information about myself and the courses I have taken.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/home.js" defer></script>
+    <title>Student Home Page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <span>Course Home Page</span>
+                <a id="menu"></a>
+            </div>
+            <ul class="navigation">
+                <li><a href="#" id="showHome">Home</a></li>
+                <li><a href="#" id="showChamber">Chamber Project</a></li>
+                <li><a href="#" id="showFinal">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <section class="first-section">
+            <div class="about">
+                <h2>About Me</h2>
+                <article>My name is Richard Edigin. I’m 20 years old and a student who’s passionate about learning and improving myself. I’ve always been curious about how things work, especially in technology and science. I enjoy studying, watching movies with good stories, and spending time with my dog. I’m hardworking, responsible, and I try to give my best in everything I do. My goal is to become a skilled software engineer and eventually build something meaningful that can help people.</article>
+            </div>
+            <div class="photo">
+                <h2>Student Photo</h2>
+                <div>
+                    <img src="images/profile.jpg" alt="profile image">
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Web Certificate Courses</h2>
+            <div class="categories">
+                <a class="specific" id="All"  href="#">All</a>
+                <a class="specific" id="CSE"  href="#">CSE</a>
+                <a class="specific" id="WDD"  href="#">WDD</a>
+            </div>
+            <div class="listed-courses">
+                <!-- div class=course -->
+            </div>
+            <p class="total">The total credits for course listed above is <span id="credits"></span></p>
+        </section>
+    </main>
+    <footer>
+        <p>@<span id="currentYear"></span> Richard Edigin Benin City, Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
