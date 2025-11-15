@@ -1,0 +1,99 @@
+@media (min-width: 769px){
+    body{
+        min-width: 768px;
+        max-width: none;
+    }
+    #menu{
+        display: none;    
+    }
+    .title{
+        min-width: 40rem;
+    }
+    .logo span{
+        font-size: 2.2rem;
+        margin-left: 1rem;
+
+    }
+    .navigation{
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .navigation li{
+        display: inline;
+    
+    }
+    .nav-spacer{
+        width: 10rem;
+        height: auto;
+    }
+    .nav-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        left: 5rem;
+    }
+    .nav-bar a{
+        font-size: 1.7rem;
+    }
+    h1{
+        font-size: 2.2rem;
+        margin-left: 2rem;
+    }
+    .hero{
+        height: 25rem;
+    }
+    .hero img{
+        object-position: 1px;
+        height: 25rem;
+        width: 100%;
+    }
+    .option{
+        margin-right: 40px;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: 1.8fr 1.3fr 1fr;
+        grid-template-rows: 1fr;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+        margin-left: 30px;
+        margin-right: 30px;
+    
+    }
+    
+    .list {
+        display: flex;
+        flex-direction: column;
+
+        .business-address{
+            display: block;
+        }
+        .business{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .business-header h3{
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .business p{
+            font-size: 1rem;
+        }
+    }
+
+
+    footer{
+        display: grid;
+        grid-template-columns: 1.1fr 0.7fr 1fr;
+        text-align: left;
+
+    }
+}
+

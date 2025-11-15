@@ -6,7 +6,7 @@
 
 :root{
     --main-font: "Roboto", sans-serif;
-    --primary-color: #0077b6;
+    --primary-color: #004c7a;
     --secondary-color: #90e0ef;
     --accents-color: #caf0f8;
 
@@ -48,6 +48,7 @@ nav{
     display: flex;
     width: fit-content;
     height: auto;
+    align-items: center;
 }
 .logo img{
     margin-left: 0.7rem;
@@ -61,7 +62,7 @@ h1{
     font-size: 1.5rem;
     font-weight: bolder;
     margin-left: 1rem;
-    color: black;
+    color: white;
     margin: 0.8rem;
 }
 
@@ -128,6 +129,7 @@ h1{
 }
 .hero img{
     object-fit: cover;
+    object-position: top;
     height: 10rem;
     width: 100%;
 }
@@ -260,9 +262,6 @@ h3{
         padding: 10px 2px 10px 2px;
         text-align: center;
     }
-    .business-image img{
-        display: none;
-    }
     .business-image{
         display: none;
     }
@@ -329,101 +328,3 @@ footer svg {
     border-radius: 50%;
 }
 
-@media (min-width: 769px){
-    body{
-        min-width: 768px;
-        max-width: none;
-    }
-    #menu{
-        display: none;    
-    }
-    .title{
-        min-width: 40rem;
-    }
-    .logo span{
-        font-size: 2.2rem;
-        margin-left: 1rem;
-
-    }
-    .navigation{
-        position: relative;
-        flex-direction: row;
-        justify-content: space-between;
-        
-    }
-    .navigation li{
-        display: inline;
-    
-    }
-    .nav-spacer{
-        width: 10rem;
-        height: auto;
-    }
-    .nav-bar{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        left: 5rem;
-    }
-    .nav-bar a{
-        font-size: 1.7rem;
-    }
-    h1{
-        font-size: 2.2rem;
-        margin-left: 2rem;
-    }
-    .hero{
-        height: 30rem;
-    }
-    .hero img{
-        object-fit: cover;
-        height: 30rem;
-        width: 100%;
-    }
-    .option{
-        margin-right: 40px;
-    }
-    .main{
-        display: grid;
-        grid-template-columns: 1.8fr 1.3fr 1fr;
-        grid-template-rows: 1fr;
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
-    .grid{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 5px;
-        margin-left: 30px;
-        margin-right: 30px;
-    
-    }
-    
-    .list {
-        display: flex;
-        flex-direction: column;
-
-        .business-address{
-            display: block;
-        }
-        .business{
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-        .business-header h3{
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        .business p{
-            font-size: 1rem;
-        }
-    }
-
-
-    footer{
-        display: grid;
-        grid-template-columns: 1.1fr 0.7fr 1fr;
-        text-align: left;
-
-    }
-}
