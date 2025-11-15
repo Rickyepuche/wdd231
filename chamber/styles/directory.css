@@ -105,7 +105,7 @@ h1{
 }
 .nav-bar a:active, .nav-bar a:hover{
     border: 1px solid black;
-    color: black;
+    color: white;
     font-weight: 700;
     background: grey;
 }
@@ -211,14 +211,23 @@ h3{
     width: 100px;
     padding-top: 3px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .business-image img{
     height: 100%;
     width: 100%;
     border-radius: 8px;
+}
+
+/* Grid view: show image with flex centering */
+.grid .business-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* List view: hide image */
+.list .business-image{
+    display: none;
 }
 .option{
     text-align: center;
@@ -233,48 +242,49 @@ h3{
 .grid{
     display: flex;
     flex-direction: column;
+}
 
-    .business{
-        background-color: var(--accents-color);
-        margin:10px 10px 10px 10px;
-        border-radius: 7px;
-        padding: 0 0 10px 0;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
-    .business-header{
-        border-bottom: 1px solid black;
-    }
+.grid .business{
+    background-color: var(--accents-color);
+    margin:10px 10px 10px 10px;
+    border-radius: 7px;
+    padding: 0 0 10px 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid .business-header{
+    border-bottom: 1px solid black;
 }
 
 .list {
 	display: flex;
 	flex-direction: column;
+}
 
-	.business{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1px;
-        background-color: var(--accents-color);
-        margin:10px 10px 10px 10px;
-        border-radius: 2px;
-        padding: 10px 2px 10px 2px;
-        text-align: center;
-    }
-    .business-image{
-        display: none;
-    }
-    .business-header h3{
-        font-size: 0.7rem;
-        font-weight: bold;
-    }
-    .business p{
-        font-size: 0.7rem;
-    }
-    .business-address{
-        display: none;
-    }
+.list .business{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background-color: var(--accents-color);
+    margin:10px 10px 10px 10px;
+    border-radius: 2px;
+    padding: 10px 2px 10px 2px;
+    text-align: center;
+}
+
+.list .business-header h3{
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.list .business p{
+    font-size: 0.7rem;
+}
+
+.list .business-address{
+    display: none;
 }
 
 
