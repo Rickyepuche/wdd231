@@ -1,0 +1,72 @@
+[
+  {
+    "name": "NeuroGrid Studios",
+    "address": "12 Boundary Road, Benin City, Edo",
+    "phone": "08125551042",
+    "website": "https://neurogrid.co",
+    "icon": "images/logo1.webp",
+    "membershipLevel": 3,
+    "description": "AI powered web design and branding studio",
+    "founded": 2024
+  },
+  {
+    "name": "GreenHarvest AgroTech",
+    "address": "54 Orchard Lane, Ibadan, Oyo",
+    "phone": "08038822213",
+    "website": "https://greenharvest.africa",
+    "icon": "images/logo2.webp",
+    "membershipLevel": 2,
+    "description": "Smart farming solutions and crop analytics",
+    "founded": 2019
+  },
+  {
+    "name": "SwiftPay Digital",
+    "address": "88 Marina Drive, Lagos Island, Lagos",
+    "phone": "07019905632",
+    "website": "https://swiftpay.ng",
+    "icon": "images/logo3.png",
+    "membershipLevel": 1,
+    "description": "Fintech startup for quick mobile payments",
+    "founded": 2021
+  },
+  {
+    "name": "Skyline Tech Hub",
+    "address": "3 Allen Avenue, Ikeja, Lagos",
+    "phone": "09094451120",
+    "website": "https://skylinetechhub.com",
+    "icon": "images/logo4.png",
+    "membershipLevel": 3,
+    "description": "Coworking space and incubator for young devs",
+    "founded": 2018
+  },
+  {
+    "name": "BlueWave Media",
+    "address": "22 Airport Road, Warri, Delta",
+    "phone": "07061005522",
+    "website": "https://bluewave.media",
+    "icon": "images/logo5.png",
+    "membershipLevel": 2,
+    "description": "Storytelling and digital marketing agency",
+    "founded": 2016
+  },
+  {
+    "name": "VectorForge Robotics",
+    "address": "12 Tech Village, Gwarinpa, Abuja",
+    "phone": "08093308844",
+    "website": "https://vectorforge.io",
+    "icon": "images/logo6.png",
+    "membershipLevel": 1,
+    "description": "Robotics and automation hardware for factories",
+    "founded": 2020
+  },
+  {
+    "name": "PulseCloud Solutions",
+    "address": "10 Spintex Close, Lekki Phase 1, Lagos",
+    "phone": "09057788841",
+    "website": "https://pulsecloud.tech",
+    "icon": "images/logo7.png",
+    "membershipLevel": 3,
+    "description": "Cloud hosting and devops services",
+    "founded": 2017
+  }
+]
