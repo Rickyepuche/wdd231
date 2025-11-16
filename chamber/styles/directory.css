@@ -124,6 +124,20 @@ h1{
     content: "X";
 }
 
+.CTA{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
 
 .hero{
     height: 10rem;
