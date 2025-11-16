@@ -136,6 +136,7 @@ h1{
 h2{
     background-color: var(--primary-color);
     text-align: center;
+    border-radius: 5px 5px 0 0;
     color: white;
 }
 
@@ -148,6 +149,7 @@ h2{
     max-width: 48.5rem;
     min-height: 14rem;
     max-height: 18rem;
+    border-radius: 5px;
     text-align: center;
     background-color: var(--secondary-color);
 }
@@ -160,6 +162,7 @@ h2{
     max-width: 48.5rem;
     min-height: 14rem;
     max-height: 18rem;
+    border-radius: 5px;
     text-align: center;
     background-color: var(--secondary-color);
 }
@@ -236,8 +239,9 @@ h3{
 .option a{
     background-color: var(--primary-color);
     text-decoration: none;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 15px 5px 15px;
     color: white;
+    border-radius: 5px;
 }
 .grid{
     display: flex;
