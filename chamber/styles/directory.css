@@ -141,6 +141,7 @@ h1{
 
 .hero{
     height: 10rem;
+    position: relative;
 }
 .hero img{
     object-fit: cover;
