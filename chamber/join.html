@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Nexora Chamber of Commerce - Apply for membership and grow your business network in Benin City, Nigeria.">
+    <meta name="keywords" content="chamber membership, join chamber, business membership, Benin City">
+    <meta name="author" content="Richard Edigin">
+    <title>Join Nexora Chamber of Commerce | Membership Application</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/directory-larger.css">
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navigation">   
+            <div class="logo">
+                <img src="images/logo.png" alt="Nexora Logo">
+                <div class="title"><span>Nexora Chamber of Commerce</span></div>   
+                <a id="menu"></a>
+            </div>
+            
+            <ul class="nav-bar">
+                <li><a href="index.html" id="showHome">Home</a></li>
+                <li><a href="directory.html" id="directory">Directory</a></li>
+                <li><a href="join.html" id="join">Join</a></li>
+            </ul>      
+        </nav>
+    </header> 
+
+    <main>
+        <h1>Join Our Chamber</h1>
+        
+        <section class="join-container">
+            <form class="membership-form" method="get" action="thankyou.html">
+                <fieldset>
+                    <legend>Membership Application</legend>
+                    
+                    <label for="first-name">
+                        First Name
+                        <input 
+                            type="text" 
+                            id="first-name" 
+                            name="fname" 
+                            title="First Name" 
+                            autocomplete="given-name" 
+                            required>
+                    </label>
+
+                    <label for="last-name">
+                        Last Name
+                        <input 
+                            type="text" 
+                            id="last-name" 
+                            name="lname" 
+                            title="Last Name" 
+                            autocomplete="family-name" 
+                            required>
+                    </label>
+
+                    <label for="org-title">
+                        Organizational Title
+                        <input 
+                            type="text" 
+                            id="org-title" 
+                            name="orgtitle" 
+                            title="Organizational Title" 
+                            autocomplete="organization-title" 
+                            pattern="[a-zA-Z\s\-]{7,}" 
+                            placeholder="Enter your title (minimum 7 characters)">
+                    </label>
+
+                    <label for="email">
+                        Email Address
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            title="Email Address" 
+                            autocomplete="email" 
+                            placeholder="example@business.com" 
+                            required>
+                    </label>
+
+                    <label for="phone">
+                        Mobile Phone Number
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            title="Mobile Phone Number" 
+                            autocomplete="tel" 
+                            required>
+                    </label>
+
+                    <label for="business-name">
+                        Business/Organization Name
+                        <input 
+                            type="text" 
+                            id="business-name" 
+                            name="business" 
+                            title="Business/Organization Name" 
+                            autocomplete="organization" 
+                            required>
+                    </label>
+
+                    <label for="membership-level">
+                        Membership Level
+                        <select id="membership-level" name="membership" title="Membership Level" required>
+                            <option value="">-- Select a Membership Level --</option>
+                            <option value="np">NP Membership - Non Profit (No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label for="description">
+                        Business/Organization Description
+                        <textarea 
+                            id="description" 
+                            name="description" 
+                            title="Business/Organization Description" 
+                            rows="5" 
+                            placeholder="Tell us about your business or organization..."></textarea>
+                    </label>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </fieldset>
+            </form>
+
+            <section class="membership-cards">
+                <h2>Membership Levels</h2>
+                <div class="cards-container">
+                    <div class="membership-card card-np">
+                        <h3>NP Membership</h3>
+                        <p class="price">No Fee</p>
+                        <p>For Non-Profit Organizations</p>
+                        <button class="info-btn" data-modal="modal-np" title="Learn more about NP Membership">Learn More</button>
+                    </div>
+
+                    <div class="membership-card card-bronze">
+                        <h3>Bronze Membership</h3>
+                        <p class="price">Affordable</p>
+                        <p>Basic Business Benefits</p>
+                        <button class="info-btn" data-modal="modal-bronze" title="Learn more about Bronze Membership">Learn More</button>
+                    </div>
+
+                    <div class="membership-card card-silver">
+                        <h3>Silver Membership</h3>
+                        <p class="price">Standard</p>
+                        <p>Enhanced Benefits Package</p>
+                        <button class="info-btn" data-modal="modal-silver" title="Learn more about Silver Membership">Learn More</button>
+                    </div>
+
+                    <div class="membership-card card-gold">
+                        <h3>Gold Membership</h3>
+                        <p class="price">Premium</p>
+                        <p>Exclusive Premium Benefits</p>
+                        <button class="info-btn" data-modal="modal-gold" title="Learn more about Gold Membership">Learn More</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Modal for NP Membership -->
+        <dialog id="modal-np" class="membership-modal">
+            <div class="modal-content">
+                <button class="close-modal" type="button">✕</button>
+                <h3>NP Membership Benefits</h3>
+                <ul>
+                    <li>Free membership for eligible non-profit organizations</li>
+                    <li>Access to chamber networking events</li>
+                    <li>Directory listing on chamber website</li>
+                    <li>Monthly newsletter with business updates</li>
+                    <li>Community event participation opportunities</li>
+                </ul>
+                <button class="modal-close-btn" type="button">Close</button>
+            </div>
+        </dialog>
+
+        <!-- Modal for Bronze Membership -->
+        <dialog id="modal-bronze" class="membership-modal">
+            <div class="modal-content">
+                <button class="close-modal" type="button">✕</button>
+                <h3>Bronze Membership Benefits</h3>
+                <ul>
+                    <li>All NP membership benefits</li>
+                    <li>Business listing with logo and description</li>
+                    <li>Discounts on chamber events and workshops</li>
+                    <li>Monthly networking breakfast access</li>
+                    <li>Email advertising opportunities (quarterly)</li>
+                    <li>Featured business spotlight (annually)</li>
+                </ul>
+                <button class="modal-close-btn" type="button">Close</button>
+            </div>
+        </dialog>
+
+        <!-- Modal for Silver Membership -->
+        <dialog id="modal-silver" class="membership-modal">
+            <div class="modal-content">
+                <button class="close-modal" type="button">✕</button>
+                <h3>Silver Membership Benefits</h3>
+                <ul>
+                    <li>All Bronze membership benefits</li>
+                    <li>Premium business profile with multiple images</li>
+                    <li>15% discount on all chamber events</li>
+                    <li>Priority access to networking events</li>
+                    <li>Monthly email advertising slot</li>
+                    <li>Quarterly featured business spotlight</li>
+                    <li>Exclusive member-only training seminars</li>
+                    <li>Business collaboration opportunities</li>
+                </ul>
+                <button class="modal-close-btn" type="button">Close</button>
+            </div>
+        </dialog>
+
+        <!-- Modal for Gold Membership -->
+        <dialog id="modal-gold" class="membership-modal">
+            <div class="modal-content">
+                <button class="close-modal" type="button">✕</button>
+                <h3>Gold Membership Benefits</h3>
+                <ul>
+                    <li>All Silver membership benefits</li>
+                    <li>VIP premium business profile</li>
+                    <li>25% discount on all chamber services and events</li>
+                    <li>Exclusive VIP-only networking events</li>
+                    <li>Weekly premium advertising rotation</li>
+                    <li>Bi-weekly featured business spotlight</li>
+                    <li>Priority access to all training and workshops</li>
+                    <li>Dedicated business partner liaison</li>
+                    <li>Speaking opportunities at chamber events</li>
+                    <li>Sponsorship and partnership opportunities</li>
+                </ul>
+                <button class="modal-close-btn" type="button">Close</button>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <div>
+        <h3>Nexora Chamber of Commerce</h3>
+        <p>10, Edigin Way off igbinidu street<br>Evbotubu, Benin City, Nigeria</p>
+        <p>Nexora@gmail.com<br>+234 801 234 5678</p>
+        </div>
+        <div>
+            <a href="https://twitter.com" target="_blank" title="Twitter">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 10.63.5 12-2 1-2 2-4 2-6-.5.5-1 1-1.5 1.5z"/>
+                </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" title="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a6 6 0 00-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 011-1h3z"/>
+                </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+            </a>
+        </div>
+        <div>
+            <p>WDD231 Class Project</p>
+            <p>@<span id="currentYear"></span> Richard Edigin Benin City, Nigeria</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

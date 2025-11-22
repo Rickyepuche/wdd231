@@ -47,16 +47,18 @@ nav{
 }
 .logo{
     display: flex;
-    width: fit-content;
+    width: 100%;
     height: auto;
     align-items: center;
 }
 .logo img{
-    margin-left: 0.7rem;
+    padding-left: 0.7rem;
     width: 2rem;
     height: 2rem;
     border-radius: 8px;
+    
 }
+
 
 h1{
     font-family: var(--main-font);
@@ -73,6 +75,9 @@ h1{
     text-decoration: none;
     padding: 0.5rem 0.75rem;
     color: white;
+    margin-left: auto;
+    justify-self: flex-end;
+    justify-items: flex-end;
 }
 #menu::before{
     content: "≡";
@@ -81,11 +86,10 @@ h1{
 .navigation{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color);
     list-style: none;
-    max-width: 760px;
+    max-width: 768px;
     text-align: start;
 
 }
@@ -134,6 +138,7 @@ h1{
     padding: 7px 15px;
     text-decoration: none;
     font-size: 1rem;
+    font-weight: bold;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
@@ -237,14 +242,14 @@ h3{
     border-radius: 8px;
 }
 
-/* Grid view: show image with flex centering */
+
 .grid .business-image{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* List view: hide image */
+
 .list .business-image{
     display: none;
 }
@@ -357,4 +362,373 @@ footer svg {
     height: 45px;
     border-radius: 50%;
 }
+
+/* ========== JOIN PAGE STYLES ========== */
+
+.join-container {
+    max-width: 48.5rem;
+    margin: 2rem auto;
+    padding: 0 0.6rem;
+}
+
+.membership-form {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.membership-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.membership-form legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.membership-form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.membership-form input,
+.membership-form select,
+.membership-form textarea {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--main-font);
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+}
+
+.membership-form input:focus,
+.membership-form select:focus,
+.membership-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 76, 122, 0.3);
+}
+
+.membership-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #003a5a;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* Membership Cards */
+.membership-cards {
+    margin: 2rem 0;
+}
+
+.membership-cards h2 {
+    margin-bottom: 1.5rem;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.membership-card {
+    background-color: var(--accents-color);
+    padding: 1.5rem;
+    border-radius: 7px;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.membership-card h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.membership-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.membership-card p {
+    font-size: 0.95rem;
+    color: black;
+    margin: 0.5rem 0;
+}
+
+.info-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: #003a5a;
+}
+
+/* Modal Styling */
+.membership-modal {
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.membership-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.close-modal:hover {
+    color: #003a5a;
+}
+
+.modal-content h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.modal-content li {
+    display: list-item;
+    margin: 0.7rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: black;
+}
+
+.modal-content li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.modal-close-btn {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-close-btn:hover {
+    background-color: #003a5a;
+}
+
+/* THANK YOU PAGE STYLES */
+
+.thankyou-container {
+    max-width: 48.5rem;
+    margin: 2rem auto;
+    padding: 0 0.6rem;
+}
+
+.thankyou-message {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--primary-color);
+}
+
+.thankyou-message h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.thankyou-message p {
+    font-size: 1.1rem;
+    color: black;
+    margin: 0.8rem 0;
+}
+
+.submission-details {
+    background-color: var(--accents-color);
+    padding: 2rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.submission-details h2 {
+    background: none;
+    color: var(--primary-color);
+    text-align: left;
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.detail-item {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 4px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.detail-item label {
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.detail-item p {
+    color: black;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.cta-section {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cta-section p {
+    color: black;
+    margin: 0.8rem 0;
+}
+
+.cta-section strong {
+    color: var(--primary-color);
+}
+
+.back-home-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-home-btn:hover {
+    background-color: #003a5a;
+}
+
+@media (min-width: 200px) and (max-width: 375px) {
+    .membership-form input,
+    .membership-form select,
+    .membership-form textarea {
+        margin-top: 0.4rem;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: var(--main-font);
+        font-size: 0.75rem;
+        background-color: white;
+        color: black;
+    }
+}
+
 
