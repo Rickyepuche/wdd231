@@ -6,14 +6,12 @@
     #menu{
         display: none;    
     }
-    .title{
-        min-width: 40rem;
-    }
     .logo span{
-        font-size: 2.2rem;
+        font-size: 1.5rem;
         margin-left: 1rem;
 
     }
+
     .navigation{
         flex-direction: row;
         max-width: none; 
@@ -27,17 +25,17 @@
     }
     
     .nav-bar{
-
+        flex: 1;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         margin-left: auto;
     }
     .logo{
-        flex: 1; 
+        flex: 2; 
     }
     .nav-bar a{
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
     h1{
         font-size: 2.2rem;
@@ -159,6 +157,187 @@
 
     .cta-section {
         max-width: 100%;
+    }
+}
+
+@media (min-width: 1025px){
+    .logo span{
+        font-size: 2.2rem;
+        margin-left: 1rem;
+    
+    }
+    .nav-bar a{
+        font-size: 1.7rem;
+    }
+}
+
+
+/* ========== DISCOVER PAGE - MEDIUM SCREENS (641px - 1024px) ========== */
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .visit-message {
+        background-color: var(--secondary-color);
+        padding: 2rem;
+        margin: 1.5rem 2rem;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .visit-message h2 {
+        background-color: transparent;
+        color: var(--primary-color);
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        font-size: 1.3rem;
+    }
+
+    .places {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 1rem 2rem;
+        grid-auto-flow: dense;
+    }
+
+    .place-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "title"
+            "figure"
+            "address"
+            "description"
+            "button";
+        background-color: var(--accents-color);
+        border-radius: 7px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .place-card h2 {
+        grid-area: title;
+        font-size: 1.3rem;
+    }
+
+    .place-figure {
+        grid-area: figure;
+        height: 220px;
+    }
+
+    .learn-more-btn {
+        font-size: 1rem;
+    }
+
+    .place-modal {
+        max-width: 85%;
+        width: 85%;
+    }
+}
+
+/* ========== DISCOVER PAGE - LARGE SCREENS (1025px+) ========== */
+
+@media (min-width: 1025px) {
+    .visit-message {
+        background-color: var(--secondary-color);
+        padding: 2rem;
+        margin: 2rem 3rem;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .visit-message h2 {
+        background-color: transparent;
+        color: var(--primary-color);
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .places {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+        padding: 1.5rem 3rem;
+        grid-auto-flow: dense;
+    }
+
+    .place-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "title"
+            "figure"
+            "address"
+            "description"
+            "button";
+        background-color: var(--accents-color);
+        border-radius: 7px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .place-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .place-card h2 {
+        grid-area: title;
+        font-size: 1.4rem;
+    }
+
+    .place-figure {
+        grid-area: figure;
+        height: 240px;
+    }
+
+    .place-figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .place-address {
+        padding: 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .place-description {
+        padding: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .learn-more-btn {
+        margin: 0.5rem 1.2rem 1.2rem 1.2rem;
+        padding: 0.9rem 1.8rem;
+        font-size: 1rem;
+    }
+
+    .place-modal {
+        max-width: 600px;
+        width: 600px;
+    }
+
+    .place-modal .modal-title {
+        font-size: 1.7rem;
+    }
+
+    .place-modal .modal-description {
+        font-size: 1.05rem;
+    }
+
+    .place-modal .modal-address {
+        font-size: 1rem;
+    }
+
+    .place-modal .modal-cost {
+        font-size: 1.05rem;
     }
 }
 
