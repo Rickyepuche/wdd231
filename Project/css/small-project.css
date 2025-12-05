@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --secondary-font: "Tourney", sans-serif;
+    --primary-font: Roboto, sans-serif;
+
+    --primary: #2d6a4f; /* Hunter Green */
+    --secondary: #40916c; /* Sea Green */
+    --accent: #74c69d; /* Mint Leaf */
+    --light-bg: #d8f3dc; /* Frosted Mint */
+    --dark: #081c15; /* Carbon Black */
+}
+
+body {
+    font-family: var(--primary-font);
+    overflow-x: hidden;
+    background: #f5f5f5;
+}
+
+/* ========== TOP NAVIGATION BAR ========== */
+.nav {
+    background: var(--primary);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: var(--secondary-font);
+}
+
+.logo {
+    font-family: "Audiowide", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    flex: 0.9;
+}
+
+.silent-links {
+    display: none;
+}
+
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hamburger:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Nav Actions (Search & Subscribe) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.subscribe-btn {
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.subscribe-btn:hover {
+    background: #0056b3;
+}
+
+/* ========== SEARCH CONTAINER ========== */
+.search-container {
+    background: white;
+    padding: 12px 16px;
+    display: none;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    animation: slideDown 0.3s ease;
+}
+
+.search-container.active {
+    display: flex;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.search-submit {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: color 0.3s ease;
+}
+
+.search-submit:hover {
+    color: #007bff;
+}
+
+/* ========== SIDE MENU PANEL ========== */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background: white;
+    padding: 16px;
+    transition: left 0.3s ease;
+    z-index: 200;
+    overflow-y: auto;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+    padding: 8px;
+    border-radius: 6px;
+    color: #333;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.close-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.side-menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    clear: both;
+}
+
+.side-menu-link {
+    display: block;
+    padding: 14px 12px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.side-menu-link:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+
+.side-menu-link.subscribe-link {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.side-menu-link.subscribe-link:hover {
+    background: #0056b3;
+    color: white;
+}
+
+/* ========== OVERLAY ========== */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 150;
+    animation: fadeIn 0.3s ease;
+}
+
+.overlay.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* ======== End of Nav Styles ======== */
+
+/* ========== Main Styles ========= */
+
+
+/* =========  Footer styles========= */
+footer {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--secondary-font);
+    gap: 1rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: var(--primary);
+    color: white;
+    margin-top: 2rem;
+}
+
+footer div {
+    padding: 0.5rem 0;
+}
+
+footer h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+footer a {
+    display: inline-block;
+    margin: 0.5rem;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+footer a:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+footer svg {
+    padding: 5px 5px 5px 5px;
+    background-color: grey;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}

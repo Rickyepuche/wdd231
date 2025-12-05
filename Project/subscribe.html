@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="subscribe-container">
+        <form class="subscribe-form" method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Subscribe to our website</legend>
+                
+                <label for="first-name">
+                    First Name
+                    <input 
+                        type="text" 
+                        id="first-name" 
+                        name="fname" 
+                        title="First Name" 
+                        autocomplete="given-name" 
+                        required>
+                </label>
+
+                <label for="last-name">
+                    Last Name
+                    <input 
+                        type="text" 
+                        id="last-name" 
+                        name="lname" 
+                        title="Last Name" 
+                        autocomplete="family-name" 
+                        required>
+                </label>
+
+                <label for="email">
+                    Email Address
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        title="Email Address" 
+                        autocomplete="email" 
+                        placeholder="example@business.com" 
+                        required>
+                </label>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <button type="submit" class="submit-btn">Subscribe</button>
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>

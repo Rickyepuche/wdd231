@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link rel="stylesheet" href="css/small-project.css">
+    <link rel="stylesheet" href="css/medium-project.css">
+    <link rel="stylesheet" href="css/large-project.css">
+    <script type="module" src="scripts/project.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Top Navigation Bar -->
+        <nav class="nav">
+            <!-- Hamburger Menu -->
+            <button id="menuBtn" class="hamburger" aria-label="Open menu">☰</button>
+            
+            <!-- Logo -->
+            <div class="logo"><span>GameVerse</span></div>
+            <!-- navigation links -->
+            <a class="silent-links">Home</a>
+            <a class="silent-links">Explore Games</a>
+
+            <!-- (Search & Subscribe) -->
+            <div class="nav-actions">
+                <button id="openSearch" class="search-toggle" aria-label="Search"><span class="material-symbols-outlined">
+                    search
+                    </span></button>
+                <a href="subscribe.html" class="subscribe-btn">Subscribe</a>
+            </div>
+        </nav>
+
+        <!-- Search Bar -->
+        <div id="searchContainer" class="search-container">
+            <input 
+                type="text" 
+                id="searchBar" 
+                class="search-input" 
+                placeholder="Search games..."
+                aria-label="Search"
+            >
+            <button id="searchSubmit" class="search-submit" aria-label="Submit search"><span class="material-symbols-outlined">
+                search
+                </span></button>
+        </div>
+
+        <!-- Side Menu Panel -->
+        <div id="sideMenu" class="side-menu">
+            <button id="closeMenu" class="close-btn" aria-label="Close menu">✕</button>
+            <nav class="side-menu-nav">
+                <a href="" class="side-menu-link">Home</a>
+                <a href="" class="side-menu-link">Explore Games</a>
+                <a href="" class="side-menu-link">New Games</a>
+                <a href="subscribe.html" class="side-menu-link subscribe-link">Subscribe</a>
+            </nav>
+        </div>
+
+        <!-- Overlay for Side Menu -->
+        <div id="overlay" class="overlay"></div>
+    </header>
+    <main>
+        <section class="hero-section" id="heroSection">
+
+        </section>
+        <section class="new-games">
+            <div>
+                <h2>New Releases</h2> 
+                <a href="">See All</a>
+            </div>
+            <div class="new-games-container"></div>
+        </section>
+        <section class="best-rated">
+            <div>
+                <h2>Best Rated </h2> 
+                <a href="">See All</a>
+            </div>
+            <div class="bestRated-container"></div>
+        </section>
+        <section class="genre-rated">
+            <div>
+                <h2>Best by Genre</h2>
+                <a href="">See All</a>
+            </div>
+            <div>
+                <a href="">Action</a>
+                <a href="">Adventure</a>
+                <a href="">Sports</a>
+                <a href="">RPG</a>
+                <a href="">Shooter</a>
+                <a href="">Horror</a>
+            </div>
+            <div class="genreRated-container"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer1">
+            <div class="logo">GameVerse</div>
+            <p>©️<span id="currentYear"></span> Richard Edigin Benin City, Nigeria</p>
+
+        </div>
+        <div class="footer2">
+            <a href="https://twitter.com" target="_blank" title="Twitter">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 10.63.5 12-2 1-2 2-4 2-6-.5.5-1 1-1.5 1.5z"/>
+                </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" title="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a6 6 0 00-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 011-1h3z"/>
+                </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+            </a>
+        </div>
+        <div class="footer3">
+            <p>WDD231 Class Project</p>
+            <h3>Overview</h3>
+            <a href="">Video demonstration</a>
+
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+    
+</body>
+</html>
