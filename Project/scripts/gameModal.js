@@ -9,7 +9,7 @@ export function initGameModal() {
         modal.close();
     });
 
-    // Close modal when clicking outside (on backdrop)
+    // Close modal when clicking outside
     modal.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.close();
