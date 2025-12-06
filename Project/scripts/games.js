@@ -33,7 +33,7 @@ initPage();
 // ==================== FETCH FUNCTIONS ========================
 // fetch all games for initial load
 async function fetchAllGames() {
-  const url = `https://api.rawg.io/api/games?key=${apiKey}&page_size=120`;
+  const url = `https://api.rawg.io/api/games?key=${apiKey}&page_size=50`;
   try {
     const response = await fetch(url);
     if (response.ok) {
@@ -119,7 +119,7 @@ function displayGames(games) {
     .map(
       (game) => `
         <a href="#">
-        <div class="game-card" data-game='${JSON.stringify(game)}'>
+        <div class="game-card" data-game="${JSON.stringify(game).replace(/"/g, '&quot;')}">
                 <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
                 <h3>${game.name}</h3>
                 <p>Rating: ${game.rating}</p>
@@ -139,7 +139,7 @@ function displayBestRated(games) {
     .map(
       (game) => `
         <a href="#">    
-        <div class="game-card" data-game='${JSON.stringify(game)}'>
+        <div class="game-card" data-game="${JSON.stringify(game).replace(/"/g, '&quot;')}">
                 <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
                 <h3>${game.name}</h3>
                 <p>Rating: ⭐ ${game.rating}</p>
@@ -159,7 +159,7 @@ function displayByGenre(games, genreName) {
     .map(
       (game) => `   
         <a href="#">
-        <div class="game-card" data-game='${JSON.stringify(game)}'>
+        <div class="game-card" data-game="${JSON.stringify(game).replace(/"/g, '&quot;')}">
             <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
             <h3>${game.name}</h3>
             <p>${genreName}</p>
@@ -180,7 +180,7 @@ function displayNewReleases(games) {
     .map(
       (game) => `
         <a href="#">
-        <div class="game-card" data-game='${JSON.stringify(game)}'>
+        <div class="game-card" data-game="${JSON.stringify(game).replace(/"/g, '&quot;')}">
                 <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
                 <h3>${game.name}</h3>
                 <p>Released: ${game.released}</p>        

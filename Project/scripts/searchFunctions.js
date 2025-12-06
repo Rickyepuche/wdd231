@@ -43,7 +43,7 @@ export function displaySearchResults(query, games) {
     
     container.innerHTML = games.map(game => `
         <a href="#" class="game-card-link">
-            <div class="game-card" data-game='${JSON.stringify(game)}'>
+            <div class="game-card" data-game="${JSON.stringify(game).replace(/\"/g, '&quot;')}">
                 <img src="${game.background_image || 'images/placeholder.webp'}" alt="${game.name}">
                 <h3>${game.name}</h3>
                 <p>⭐ ${game.rating}</p>

@@ -71,9 +71,11 @@ export function attachGameCardListeners() {
             e.preventDefault();
             
             // Get game data from the card's data attribute
-            const gameData = card.getAttribute("data-game");
+            let gameData = card.getAttribute("data-game");
             if (gameData) {
                 try {
+                    // Decode HTML entities (&quot; -> ")
+                    gameData = gameData.replace(/&quot;/g, '"');
                     const game = JSON.parse(gameData);
                     openGameModal(game);
                 } catch (error) {
