@@ -114,4 +114,40 @@
         height: 32px;
         font-size: 20px;
     }
+
+    /* Medium view form styles */
+    .subscribe-container {
+        padding: 50px 20px;
+    }
+
+    .subscribe-header h1 {
+        font-size: 2.8rem;
+    }
+
+    .subscribe-form {
+        max-width: 550px;
+        padding: 40px;
+    }
+
+    legend {
+        font-size: 1.6rem;
+        margin-bottom: 28px;
+    }
+
+    label {
+        margin-bottom: 22px;
+    }
+
+    input[type=\"text\"],
+    input[type=\"email\"],
+    input[type=\"tel\"],
+    input[type=\"date\"] {
+        padding: 13px 16px;
+        font-size: 1.02rem;
+    }
+
+    .submit-btn {
+        padding: 15px 26px;
+        font-size: 1.1rem;
+    }
 }

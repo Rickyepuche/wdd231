@@ -3,53 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="GameVerse - Subscribe to get the latest game updates and exclusive offers">
+    <meta name="keywords" content="gaming, subscription, updates, game news">
+    <meta name="author" content="Richard Edigin">
+    <title>Subscribe | GameVerse</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/small-project.css">
+    <link rel="stylesheet" href="css/medium-project.css">
+    <link rel="stylesheet" href="css/large-project.css">
+    <link rel="stylesheet" href="css/subscribe.css">
 </head>
 <body>
-    <section class="subscribe-container">
-        <form class="subscribe-form" method="get" action="thankyou.html">
-            <fieldset>
-                <legend>Subscribe to our website</legend>
-                
-                <label for="first-name">
-                    First Name
-                    <input 
-                        type="text" 
-                        id="first-name" 
-                        name="fname" 
-                        title="First Name" 
-                        autocomplete="given-name" 
-                        required>
-                </label>
+    <header>
+        <!-- Top Navigation Bar -->
+        <nav class="nav">
+            <!-- Hamburger Menu -->
+            <button id="menuBtn" class="hamburger" aria-label="Open menu">☰</button>
+            
+            <!-- Logo -->
+            <div class="logo"><span>GameVerse</span></div>
+            <!-- navigation links -->
+            <a href="project.html" class="silent-links">Home</a>
+            <a href="games.html" class="silent-links">Explore Games</a>
 
-                <label for="last-name">
-                    Last Name
-                    <input 
-                        type="text" 
-                        id="last-name" 
-                        name="lname" 
-                        title="Last Name" 
-                        autocomplete="family-name" 
-                        required>
-                </label>
+            <!-- (Search & Subscribe) -->
+            <div class="nav-actions">
+                <button id="openSearch" class="search-toggle" aria-label="Search"><span class="material-symbols-outlined">
+                    search
+                    </span></button>
+                <a href="subscribe.html" class="subscribe-btn">Subscribe</a>
+            </div>
+        </nav>
 
-                <label for="email">
-                    Email Address
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        title="Email Address" 
-                        autocomplete="email" 
-                        placeholder="example@business.com" 
-                        required>
-                </label>
+        <!-- Search Bar -->
+        <div id="searchContainer" class="search-container">
+            <input 
+                type="text" 
+                id="searchBar" 
+                class="search-input" 
+                placeholder="Search games..."
+                aria-label="Search"
+            >
+            <button id="searchSubmit" class="search-submit" aria-label="Submit search"><span class="material-symbols-outlined">
+                search
+                </span></button>
+        </div>
 
-                <input type="hidden" id="timestamp" name="timestamp">
+        <!-- Side Menu Panel -->
+        <div id="sideMenu" class="side-menu">
+            <button id="closeMenu" class="close-btn" aria-label="Close menu">✕</button>
+            <nav class="side-menu-nav">
+                <a href="project.html" class="side-menu-link">Home</a>
+                <a href="games.html" class="side-menu-link">Explore Games</a>
+                <a href="games.html" class="side-menu-link">New Games</a>
+                <a href="subscribe.html" class="side-menu-link subscribe-link">Subscribe</a>
+            </nav>
+        </div>
 
-                <button type="submit" class="submit-btn">Subscribe</button>
-            </fieldset>
-        </form>
-    </section>
+        <!-- Overlay for Side Menu -->
+        <div id="overlay" class="overlay"></div>
+    </header>
+    
+    <main>
+        <section class="subscribe-container">
+            <div class="subscribe-header">
+                <h1>Join GameVerse</h1>
+                <p>Subscribe to get exclusive game recommendations and the latest updates</p>
+            </div>
+            
+            <form class="subscribe-form" method="get" action="thankyou.html">
+                <fieldset>
+                    <legend>Subscribe to our website</legend>
+                    
+                    <label for="first-name">
+                        First Name
+                        <input 
+                            type="text" 
+                            id="first-name" 
+                            name="fname" 
+                            title="First Name" 
+                            autocomplete="given-name" 
+                            required>
+                    </label>
+
+                    <label for="last-name">
+                        Last Name
+                        <input 
+                            type="text" 
+                            id="last-name" 
+                            name="lname" 
+                            title="Last Name" 
+                            autocomplete="family-name" 
+                            required>
+                    </label>
+
+                    <label for="email">
+                        Email Address
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            title="Email Address" 
+                            autocomplete="email" 
+                            placeholder="example@business.com" 
+                            required>
+                    </label>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <button type="submit" class="submit-btn">Subscribe</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer1">
+            <div class="logo">GameVerse</div>
+            <p>©️<span id="currentYear"></span> Richard Edigin Benin City, Nigeria</p>
+
+        </div>
+        <div class="footer2">
+            <a href="https://twitter.com" target="_blank" title="Twitter">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 10.63.5 12-2 1-2 2-4 2-6-.5.5-1 1-1.5 1.5z"/>
+                </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" title="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a6 6 0 00-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 011-1h3z"/>
+                </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+            </a>
+        </div>
+        <div class="footer3">
+            <p>WDD231 Class Project</p>
+            <h3>Overview</h3>
+            <a href="">Video demonstration</a>
+
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+    
+    <script type="module" src="scripts/subscribe.js"></script>
 </body>
 </html>

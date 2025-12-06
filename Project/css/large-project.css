@@ -68,7 +68,7 @@
 @media (min-width: 1400px) {
     .hero-section {
         height: 350px;
-        background-image: url("../images/large-hero.webp");
+        background-image: url(\"../images/large-hero.webp\");
         background-size: cover;
         background-position: center;
     }
@@ -82,5 +82,56 @@
         justify-content: center;
         text-align: center;
         z-index: 99;
+    }
+
+    /* Large view form styles */
+    .subscribe-container {
+        padding: 60px 20px;
+    }
+
+    .subscribe-header h1 {
+        font-size: 3rem;
+        margin-bottom: 16px;
+    }
+
+    .subscribe-header p {
+        font-size: 1.1rem;
+        max-width: 600px;
+    }
+
+    .subscribe-form {
+        max-width: 600px;
+        padding: 48px;
+    }
+
+    legend {
+        font-size: 1.8rem;
+        margin-bottom: 32px;
+        padding-bottom: 20px;
+    }
+
+    label {
+        margin-bottom: 24px;
+        gap: 10px;
+        font-size: 1rem;
+    }
+
+    input[type=\"text\"],
+    input[type=\"email\"],
+    input[type=\"tel\"],
+    input[type=\"date\"] {
+        padding: 14px 18px;
+        font-size: 1.05rem;
+    }
+
+    .submit-btn {
+        padding: 16px 28px;
+        font-size: 1.2rem;
+        margin-top: 24px;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(45, 106, 79, 0.3);
     }
 }

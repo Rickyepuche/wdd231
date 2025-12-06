@@ -49,7 +49,7 @@ export function openGameModal(game) {
         : "<span class='badge'>N/A</span>";
     document.querySelector(".modal-game-genres").innerHTML = genresHtml;
     
-    // Description (using genres as fallback since API doesn't have description)
+    // Description 
     const descriptionText = game.description || `Explore ${game.name} - a game with ${game.reviews_count || 0} player reviews.`;
     document.querySelector(".modal-game-description").textContent = descriptionText;
     

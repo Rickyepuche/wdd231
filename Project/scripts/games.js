@@ -33,7 +33,7 @@ initPage();
 // ==================== FETCH FUNCTIONS ========================
 // fetch all games for initial load
 async function fetchAllGames() {
-  const url = `https://api.rawg.io/api/games?key=${apiKey}&page_size=50`;
+  const url = `https://api.rawg.io/api/games?key=${apiKey}&page_size=120`;
   try {
     const response = await fetch(url);
     if (response.ok) {
