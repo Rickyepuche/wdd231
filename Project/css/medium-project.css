@@ -12,7 +12,6 @@
     }
 
 
-
     .hero-section {
         height: 250px;
         background-image: url("../images/large-hero.webp");
@@ -84,5 +83,35 @@
     footer{
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .game-modal {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .modal-header {
+        padding: 16px;
+    }
+
+    .modal-game-image {
+        height: 180px;
+    }
+
+    .modal-header-info h2 {
+        font-size: 20px;
+    }
+
+    .modal-body {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .close-modal-btn {
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
     }
 }
