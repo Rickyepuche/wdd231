@@ -1,9 +1,11 @@
 import { getSearchQuery, searchGames, displaySearchResults} from "./searchFunctions.js";
 import { initNavigation, initFooter } from "./navigationModule.js";
+import { initScrollButtons } from "./scrollButtons.js";
 
-// Initialize navigation and footer
+// Initialize navigation, footer, and scroll buttons
 initNavigation();
 initFooter();
+initScrollButtons();
 
 const apiKey = "00e0d38538cc401cb85a3aea150e066b";
 let allGames = [];
@@ -116,7 +118,7 @@ function displayGames(games) {
       (game) => `
         <a href="#">
         <div class="game-card">
-                <img src="${game.background_image}" alt="${game.name}">
+                <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
                 <h3>${game.name}</h3>
                 <p>Rating: ${game.rating}</p>
                 <p>Reviews: ${game.reviews_count}</p>
@@ -135,7 +137,7 @@ function displayBestRated(games) {
       (game) => `
         <a href="#">    
         <div class="game-card">
-                <img src="${game.background_image}" alt="${game.name}">
+                <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
                 <h3>${game.name}</h3>
                 <p>Rating: ⭐ ${game.rating}</p>
                 <p>Reviews: ${game.reviews_count}</p>
@@ -154,7 +156,7 @@ function displayByGenre(games, genreName) {
       (game) => `   
         <a href="#">
         <div class="game-card">
-            <img src="${game.background_image}" alt="${game.name}">
+            <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
             <h3>${game.name}</h3>
             <p>${genreName}</p>
             <p>Rating: ⭐ ${game.rating}</p>
@@ -174,7 +176,7 @@ function displayNewReleases(games) {
       (game) => `
         <a href="#">
         <div class="game-card">
-                <img src="${game.background_image}" alt="${game.name}">
+                <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
                 <h3>${game.name}</h3>
                 <p>Released: ${game.released}</p>        
         </div>
@@ -193,7 +195,7 @@ const adventureLink = document.getElementById("Adventure");
 const sportsLink = document.getElementById("Sports");
 const rpgLink = document.getElementById("RPG");
 const shooterLink = document.getElementById("Shooter");
-const horrorLink = document.getElementById("Horror");
+const multiplayerLink = document.getElementById("Multiplayer");
 
 newestLink.addEventListener("click", async (e) => {
   e.preventDefault();
@@ -215,7 +217,7 @@ actionLink.addEventListener("click", async (e) => {
 
 adventureLink.addEventListener("click", async (e) => {
   e.preventDefault();
-  const adventureGames = await fetchByGenre(12);
+  const adventureGames = await fetchByGenre(3);
   displayByGenre(adventureGames, "Adventure");
 });
 
@@ -237,8 +239,8 @@ shooterLink.addEventListener("click", async (e) => {
   displayByGenre(shooterGames, "Shooter");
 });
 
-horrorLink.addEventListener("click", async (e) => {
+multiplayerLink.addEventListener("click", async (e) => {
   e.preventDefault();
-  const horrorGames = await fetchByGenre(23);
-  displayByGenre(horrorGames, "Horror");
+  const multiplayerGames = await fetchByGenre(16);
+  displayByGenre(multiplayerGames, "Multiplayer");
 });

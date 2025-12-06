@@ -72,4 +72,15 @@
         background-size: cover;
         background-position: center;
     }
+    .gameImg {
+        position:  relative;
+        top: 15px;
+        height: 90%;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        z-index: 99;
+    }
 }

@@ -91,7 +91,9 @@
             <!-- Search Results Section -->
             <section class="search-results" id="searchSection" style="display: none;">
                 <h2 id="searchTitle"></h2>
-                <div class="search-results-container"></div>
+                <button class="scroll-btn scroll-left" data-target="searchResultsContainer" aria-label="Scroll left">‹</button>
+                <div id="searchResultsContainer" class="search-results-container"></div>
+                <button class="scroll-btn scroll-right" data-target="searchResultsContainer" aria-label="Scroll right">›</button>
             </section>
 
             <!-- All Games Section -->
@@ -105,10 +107,12 @@
                     <a class="filters" id="Sports" href="">Sports</a>
                     <a class="filters" id="RPG" href="">RPG</a>
                     <a class="filters" id="Shooter" href="">Shooter</a>
-                    <a class="filters" id="Horror" href="">Horror</a>
+                    <a class="filters" id="Horror" href="">Multiplayer</a>
                 </div>
+                <button class="scroll-btn scroll-left" data-target="gamesContainer" aria-label="Scroll left">‹</button>
                 <div id="gamesContainer" class="games-container">
                 </div>
+                <button class="scroll-btn scroll-right" data-target="gamesContainer" aria-label="Scroll right">›</button>
             </section>
         </main>
         <footer>

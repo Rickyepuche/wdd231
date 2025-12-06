@@ -12,7 +12,7 @@ export function searchGames(games, searchTerm) {
 
 export function displaySearchResults(query, games) {
     const titleElement = document.getElementById("searchTitle");
-    const container = document.querySelector(".search-results-container");
+    const container = document.getElementById("searchResultsContainer");
     const searchSection = document.getElementById("searchSection");
     const allGamesSection = document.getElementById("allGamesSection");
     
@@ -22,7 +22,7 @@ export function displaySearchResults(query, games) {
         return;
     }
     if (!container) {
-        console.error("❌ search-results-container element not found in HTML");
+        console.error("❌ searchResultsContainer element not found in HTML");
         return;
     }
     
