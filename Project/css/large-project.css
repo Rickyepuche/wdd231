@@ -60,7 +60,11 @@
         gap: 10px;
     }
 
-  
+    .search-results-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
     footer{
         justify-content: space-between;
     }

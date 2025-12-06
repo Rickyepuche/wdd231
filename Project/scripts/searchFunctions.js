@@ -41,15 +41,26 @@ export function displaySearchResults(query, games) {
         return;
     }
     
-    container.innerHTML = games.map(game => `
+    container.innerHTML = games
+      .map(
+        (game) => `
         <a href="#" class="game-card-link">
-            <div class="game-card" data-game="${JSON.stringify(game).replace(/\"/g, '&quot;')}">
-                <img src=\"${game.background_image || 'images/placeholder.webp'}\" alt=\"${game.name}\" loading=\"lazy\">
+            <div class="game-card" data-game="${JSON.stringify(game).replace(
+              /\"/g,
+              "&quot;"
+            )}">
+                <img src=\"${
+                  game.background_image || "images/placeholder.webp"
+                }\" alt=\"${game.name}\" loading=\"lazy\">
                 <h3>${game.name}</h3>
                 <p>⭐ ${game.rating}</p>
+                <p>Reviews: ${game.reviews_count}</p>
+                <p>Released: ${game.released}</p>
             </div>
         </a>
-    `).join("");
+    `
+      )
+      .join("");
     
     attachGameCardListeners();
 }

@@ -323,6 +323,15 @@ h1{
 }
 
 
+.search-results-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 /* Subscribe Form Styles */
 
 .subscribe-container {
