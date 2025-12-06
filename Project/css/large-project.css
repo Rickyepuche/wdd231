@@ -60,15 +60,17 @@
         gap: 10px;
     }
 
-
+  
     footer{
         justify-content: space-between;
     }
 }
+
+
 @media (min-width: 1400px) {
     .hero-section {
         height: 350px;
-        background-image: url(\"../images/large-hero.webp\");
+        background-image: url("../images/large-hero.webp");
         background-size: cover;
         background-position: center;
     }
@@ -133,5 +135,14 @@
     .submit-btn:hover {
         transform: translateY(-4px);
         box-shadow: 0 12px 32px rgba(45, 106, 79, 0.3);
+    }
+
+    .game-modal {
+        width: 95%;
+        max-height: 97vh;
+    }
+
+    .modal-game-image {
+        height: 200px;
     }
 }

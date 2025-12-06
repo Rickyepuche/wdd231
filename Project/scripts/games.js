@@ -120,7 +120,7 @@ function displayGames(games) {
       (game) => `
         <a href="#">
         <div class="game-card" data-game="${JSON.stringify(game).replace(/"/g, '&quot;')}">
-                <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
+                <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}" loading="lazy">
                 <h3>${game.name}</h3>
                 <p>Rating: ${game.rating}</p>
                 <p>Reviews: ${game.reviews_count}</p>
@@ -140,7 +140,7 @@ function displayBestRated(games) {
       (game) => `
         <a href="#">    
         <div class="game-card" data-game="${JSON.stringify(game).replace(/"/g, '&quot;')}">
-                <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
+                <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}" loading="lazy">
                 <h3>${game.name}</h3>
                 <p>Rating: ⭐ ${game.rating}</p>
                 <p>Reviews: ${game.reviews_count}</p>
@@ -160,7 +160,7 @@ function displayByGenre(games, genreName) {
       (game) => `   
         <a href="#">
         <div class="game-card" data-game="${JSON.stringify(game).replace(/"/g, '&quot;')}">
-            <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
+            <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}" loading="lazy">
             <h3>${game.name}</h3>
             <p>${genreName}</p>
             <p>Rating: ⭐ ${game.rating}</p>
@@ -181,7 +181,7 @@ function displayNewReleases(games) {
       (game) => `
         <a href="#">
         <div class="game-card" data-game="${JSON.stringify(game).replace(/"/g, '&quot;')}">
-                <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
+                <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}" loading="lazy">
                 <h3>${game.name}</h3>
                 <p>Released: ${game.released}</p>        
         </div>
