@@ -1,10 +1,12 @@
 import { initNavigation, initFooter } from "./navigationModule.js";
 import { initScrollButtons } from "./scrollButtons.js";
+import { initGameModal, attachGameCardListeners } from "./gameModal.js";
 
-// Initialize navigation, footer, and scroll buttons
+// Initialize navigation, footer, scroll buttons, and game modal
 initNavigation();
 initFooter();
 initScrollButtons();
+initGameModal();
 
 
 const apiKey = "00e0d38538cc401cb85a3aea150e066b";
@@ -85,7 +87,7 @@ function displayBestRated(games) {
         .map(
         (game) => `
             <a href="#">    
-            <div class="game-card">
+            <div class="game-card" data-game='${JSON.stringify(game)}'>
                     <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
                     <h3>${game.name}</h3>
                     <p>Rating: ⭐ ${game.rating}</p>
@@ -96,6 +98,7 @@ function displayBestRated(games) {
         `
         )
         .join("");
+    attachGameCardListeners();
 }
 
 // Display by genre
@@ -105,7 +108,7 @@ function displayByGenre(games, genreName) {
     .map(
       (game) => `   
         <a href="#">
-        <div class="game-card">
+        <div class="game-card" data-game='${JSON.stringify(game)}'>
             <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
             <h3>${game.name}</h3>
             <p>${genreName}</p>
@@ -117,6 +120,7 @@ function displayByGenre(games, genreName) {
     `
     )
     .join("");
+  attachGameCardListeners();
 }
 
 // Display new releases
@@ -126,7 +130,7 @@ function displayNewReleases(games) {
     .map(
       (game) => `
         <a href="#">
-        <div class="game-card">
+        <div class="game-card" data-game='${JSON.stringify(game)}'>
                 <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}">
                 <h3>${game.name}</h3>
                 <p>Released: ${game.released}</p>
@@ -136,6 +140,7 @@ function displayNewReleases(games) {
     `
     )
     .join("");
+    attachGameCardListeners();
 }
 
 // filtering options

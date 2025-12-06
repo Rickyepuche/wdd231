@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="css/small-project.css">
     <link rel="stylesheet" href="css/medium-project.css">
     <link rel="stylesheet" href="css/large-project.css">
+    <link rel="stylesheet" href="css/game-modal.css">
     <script type="module" src="scripts/project.js"></script>
 </head>
 <body>
@@ -98,17 +99,22 @@
             <div class="headings">
                 <h2>New Releases</h2> 
             </div>
-            <button class="scroll-btn scroll-left" data-target="newGames" aria-label="Scroll left">‹</button>
             <div id="newGames" class="new-games-container"></div>
-            <button class="scroll-btn scroll-right" data-target="newGames" aria-label="Scroll right">›</button>
+            <div class="scroll-buttons">
+                <button class="scroll-btn scroll-left" data-target="newGames" aria-label="Scroll left">‹</button>
+                <button class="scroll-btn scroll-right" data-target="newGames" aria-label="Scroll right">›</button>
+            </div>
         </section>
         <section class="best-rated">
             <div class="headings">
                 <h2>Best Rated </h2> 
             </div>
-            <button class="scroll-btn scroll-left" data-target="bestRated" aria-label="Scroll left">‹</button>
             <div id="bestRated" class="bestRated-container"></div>
-            <button class="scroll-btn scroll-right" data-target="bestRated" aria-label="Scroll right">›</button>
+            <div class="scroll-buttons">
+                <button class="scroll-btn scroll-left" data-target="bestRated" aria-label="Scroll left">‹</button>
+                <button class="scroll-btn scroll-right" data-target="bestRated" aria-label="Scroll right">›</button>
+            </div>
+            
         </section>
         <section class="genre-rated">
             <div class="headings">
@@ -122,10 +128,52 @@
                 <a id="Shooter" class="filters" href="">Shooter</a>
                 <a id="Multiplayer" class="filters" href="">Multiplayer</a>
             </div>
-            <button class="scroll-btn scroll-left" data-target="genreRated" aria-label="Scroll left">‹</button>
             <div id="genreRated" class="genreRated-container"></div>
-            <button class="scroll-btn scroll-right" data-target="genreRated" aria-label="Scroll right">›</button>
         </section>
+
+        <!-- Game Details Modal -->
+        <dialog id="gameModal" class="game-modal">
+            <div class="modal-content">
+                <button class="close-modal-btn" aria-label="Close">×</button>
+                <div class="modal-header">
+                    <img class="modal-game-image" src="" alt="Game">
+                    <div class="modal-header-info">
+                        <h2 class="modal-game-title"></h2>
+                        <div class="modal-game-rating"></div>
+                        <div class="modal-game-reviews"></div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-section">
+                        <h3>Description</h3>
+                        <p class="modal-game-description"></p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Platforms</h3>
+                        <div class="modal-game-platforms"></div>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Developers</h3>
+                        <div class="modal-game-developers"></div>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Genres</h3>
+                        <div class="modal-game-genres"></div>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Stores</h3>
+                        <div class="modal-game-stores"></div>
+                    </div>
+                    <div class="modal-section">
+                        <h3 class="modal-game-metacritic"></h3>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Released</h3>
+                        <p class="modal-game-released"></p>
+                    </div>
+                </div>
+            </div>
+        </dialog>
     </main>
     <footer>
         <div class="footer1">

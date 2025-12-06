@@ -1,4 +1,6 @@
 // searchFunctions.js
+import { attachGameCardListeners } from "./gameModal.js";
+
 export function getSearchQuery() {
     const params = new URLSearchParams(window.location.search);
     return params.get("search");
@@ -41,11 +43,13 @@ export function displaySearchResults(query, games) {
     
     container.innerHTML = games.map(game => `
         <a href="#" class="game-card-link">
-            <div class="game-card">
-                <img src="${game.background_image || 'placeholder.jpg'}" alt="${game.name}">
+            <div class="game-card" data-game='${JSON.stringify(game)}'>
+                <img src="${game.background_image || 'images/placeholder.webp'}" alt="${game.name}">
                 <h3>${game.name}</h3>
                 <p>⭐ ${game.rating}</p>
             </div>
         </a>
     `).join("");
+    
+    attachGameCardListeners();
 }

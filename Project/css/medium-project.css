@@ -42,6 +42,44 @@
         gap: 10px;
     }
 
+    .scroll-buttons {
+        position: relative;
+        bottom: 200px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .scroll-btn {
+        background: var(--primary);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        margin: 0 8px;
+    }
+    
+    .scroll-btn:hover {
+        background: var(--secondary);
+        transform: scale(1.1);
+    }
+    
+    .scroll-btn:active {
+        transform: scale(0.95);
+    }
+    
+
 
     footer{
         flex-direction: row;
