@@ -13,11 +13,34 @@
 
 
 
+    .hero-section {
+        height: 250px;
+        background-image: url("../images/large-hero.webp");
+        background-size: cover;
+        background-position: center;
+    }
 
-
-
-
-
+    .genreRated-container {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+    
+    .games-container{
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
 
 
     footer{

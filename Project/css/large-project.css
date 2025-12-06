@@ -12,12 +12,64 @@
     }
 
 
+    .hero-section {
+        height: 300px;
+        background-image: url("../images/large-hero.webp");
+        background-size: cover;
+        background-position: center;
+    }
 
+    .gameImg {
+        position:  relative;
+        top: 15px;
+        height: 60%;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        z-index: 99;
+    }
+    .gameImg img {
+        justify-items: center;
+        justify-self: center;
+        height: 100%;
+        width: auto;
+        text-align: center;
+    }
 
-
+    .genreRated-container {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+    
+    .games-container{
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
 
 
     footer{
         justify-content: space-between;
+    }
+}
+@media (min-width: 1400px) {
+    .hero-section {
+        height: 350px;
+        background-image: url("../images/large-hero.webp");
+        background-size: cover;
+        background-position: center;
     }
 }

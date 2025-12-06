@@ -1,30 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header></header>
-    <main>
-        <section>
-            <h1>All Games</h1>
-            <div>
-                <a href="">Newest</a>
-                <a href="">Best Rated</a>
-                <a href="">Action</a>
-                <a href="">Adventure</a>
-                <a href="">Sports</a>
-                <a href="">RPG</a>
-                <a href="">Shooter</a>
-                <a href="">Horror</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="GameVerse - Discover the latest video games, trending titles, and top-rated games. Your ultimate gaming hub with reviews, ratings, and game recommendations.">
+        <meta name="keywords" content="video games, game reviews, gaming, game database, latest games, best rated games, game recommendations, gaming platform">
+        <meta name="author" content="Richard Edigin">
+        <meta name="robots" content="index, follow">
+        <title>GameVerse | Ultimate Gaming Hub - Latest Games, Reviews & Ratings</title>
+    
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="canonical" href="https://rickyepuche.github.io/wdd231/Project/">
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="GameVerse | Ultimate Gaming Hub">
+        <meta property="og:description" content="Explore the latest video games, top-rated titles, and trending games. Find your next favorite game on GameVerse.">
+        <meta property="og:image" content="https://rickyepuche.github.io/wdd231/Project/images/gameverse-og.jpg">
+        <meta property="og:url" content="https://rickyepuche.github.io/wdd231/Project/">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="GameVerse">
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="GameVerse | Ultimate Gaming Hub">
+        <meta name="twitter:description" content="Discover latest games, reviews, and ratings on GameVerse. Your one-stop gaming platform.">
+        <meta name="twitter:image" content="https://rickyepuche.github.io/wdd231/Project/images/gameverse-og.jpg">
+        <meta name="twitter:creator" content="@rickyepuche">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+        <link rel="stylesheet" href="css/small-project.css">
+        <link rel="stylesheet" href="css/medium-project.css">
+        <link rel="stylesheet" href="css/large-project.css">
+        <script type="module" src="scripts/games.js"></script>
+    </head>
+    <body>
+        <header>
+            <!-- Top Navigation Bar -->
+            <nav class="nav">
+                <!-- Hamburger Menu -->
+                <button id="menuBtn" class="hamburger" aria-label="Open menu">☰</button>
+                
+                <!-- Logo -->
+                <div class="logo"><span>GameVerse</span></div>
+                <!-- navigation links -->
+                <a href="project.html" class="silent-links">Home</a>
+                <a href="games.html" class="silent-links">Explore Games</a>
+    
+                <!-- (Search & Subscribe) -->
+                <div class="nav-actions">
+                    <button id="openSearch" class="search-toggle" aria-label="Search"><span class="material-symbols-outlined">
+                        search
+                        </span></button>
+                    <a href="subscribe.html" class="subscribe-btn">Subscribe</a>
+                </div>
+            </nav>
+    
+            <!-- Search Bar -->
+            <div id="searchContainer" class="search-container">
+                <input 
+                    type="text" 
+                    id="searchBar" 
+                    class="search-input" 
+                    placeholder="Search games..."
+                    aria-label="Search"
+                >
+                <button id="searchSubmit" class="search-submit" aria-label="Submit search"><span class="material-symbols-outlined">
+                    search
+                    </span></button>
             </div>
-            <div id="gamesContainer" class="games-container">
-                <!-- Games will be dynamically inserted here -->
+    
+            <!-- Side Menu Panel -->
+            <div id="sideMenu" class="side-menu">
+                <button id="closeMenu" class="close-btn" aria-label="Close menu">✕</button>
+                <nav class="side-menu-nav">
+                    <a href="project.html" class="side-menu-link">Home</a>
+                    <a href="games.html" class="side-menu-link">Explore Games</a>
+                    <a href="games.html" class="side-menu-link">New Games</a>
+                    <a href="subscribe.html" class="side-menu-link subscribe-link">Subscribe</a>
+                </nav>
             </div>
-        </section>
-    </main>
-    <footer></footer>
-</body>
+    
+            <!-- Overlay for Side Menu -->
+            <div id="overlay" class="overlay"></div>
+        </header>
+        <main>
+            <!-- Search Results Section -->
+            <section class="search-results" id="searchSection" style="display: none;">
+                <h2 id="searchTitle"></h2>
+                <div class="search-results-container"></div>
+            </section>
+
+            <!-- All Games Section -->
+            <section id="allGamesSection">
+                <h1 class="secondH1">All Games</h1>
+                <div class="filters-container">
+                    <a class="filters" id="Newest" href="">Newest</a>
+                    <a class="filters" id="BestRated" href="">Best Rated</a>
+                    <a class="filters" id="Action" href="">Action</a>
+                    <a class="filters" id="Adventure" href="">Adventure</a>
+                    <a class="filters" id="Sports" href="">Sports</a>
+                    <a class="filters" id="RPG" href="">RPG</a>
+                    <a class="filters" id="Shooter" href="">Shooter</a>
+                    <a class="filters" id="Horror" href="">Horror</a>
+                </div>
+                <div id="gamesContainer" class="games-container">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer1">
+                <div class="logo">GameVerse</div>
+                <p>©️<span id="currentYear"></span> Richard Edigin Benin City, Nigeria</p>
+    
+            </div>
+            <div class="footer2">
+                <a href="https://twitter.com" target="_blank" title="Twitter">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 10.63.5 12-2 1-2 2-4 2-6-.5.5-1 1-1.5 1.5z"/>
+                    </svg>
+                </a>
+                <a href="https://facebook.com" target="_blank" title="Facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 2h-3a6 6 0 00-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 011-1h3z"/>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer3">
+                <p>WDD231 Class Project</p>
+                <h3>Overview</h3>
+                <a href="">Video demonstration</a>
+    
+                <p id="lastModified"></p>
+            </div>
+        </footer>
+    </body>
 </html>
