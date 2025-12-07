@@ -202,6 +202,14 @@ const sportsLink = document.getElementById("Sports");
 const rpgLink = document.getElementById("RPG");
 const shooterLink = document.getElementById("Shooter");
 const multiplayerLink = document.getElementById("Multiplayer");
+const sideButtonNewGames = document.getElementById("sideMenuNew");
+
+sideButtonNewGames.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const newReleases = await fetchNewReleases();
+    displayNewReleases(newReleases);
+});
+
 
 newestLink.addEventListener("click", async (e) => {
   e.preventDefault();
@@ -247,6 +255,7 @@ shooterLink.addEventListener("click", async (e) => {
 
 multiplayerLink.addEventListener("click", async (e) => {
   e.preventDefault();
-  const multiplayerGames = await fetchByGenre(16);
+  const multiplayerGames = await fetchByGenre(59);
   displayByGenre(multiplayerGames, "Multiplayer");
+  console.log("Multiplayer games loaded");                                                                       
 });

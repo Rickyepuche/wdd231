@@ -119,7 +119,7 @@ body {
     border: 2px solid var(--light-bg);
 }
 
-@media (max-width: 358px) {
+@media (max-width: 600px) {
     .subscribe-btn {
         display: none;
         padding: 6px 10px;
@@ -292,9 +292,24 @@ body {
 .hero-section {
     width: 100%;
     height: 150px;
-    background-image: url("../images/small-hero.webp");
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.hero-section picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-section picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .gameImg {
@@ -541,18 +556,19 @@ footer p {
     font-size: 0.9rem;
     line-height: 1.5;
 }
+.footer3 p{
+    font-family: var(--header-font);
+}
 
 footer a {
     display: inline-block;
     margin: 0.5rem;
     color: var(--text);
     text-decoration: none;
-    transition: transform 0.3s, opacity 0.3s;
 }
 
-footer a:hover {
-    transform: scale(1.15);
-    opacity: 0.8;
+.footer3 a:hover {
+    color: var(--dark);
 }
 
 footer svg {

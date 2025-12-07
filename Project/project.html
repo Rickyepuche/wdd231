@@ -79,7 +79,7 @@
             <nav class="side-menu-nav">
                 <a href="project.html" class="side-menu-link">Home</a>
                 <a href="games.html" class="side-menu-link">Explore Games</a>
-                <a href="games.html" class="side-menu-link">New Games</a>
+                <a href="games.html"  class="side-menu-link">New Games</a>
                 <a href="subscribe.html" class="side-menu-link subscribe-link">Subscribe</a>
             </nav>
         </div>
@@ -89,8 +89,12 @@
     </header>
     <main>
         <section class="hero-section" id="heroSection">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/large-hero.webp">
+                <img src="images/small-hero.webp" alt="Hero-image" loading="lazy">
+            </picture>
             <div class="gameImg">
-                <img src="./images/games.png" loading="lazy" alt="games">
+                <img src="./images/games.png" loading="lazy" alt="games Universe image">
                 <h1>Universe</h1>
             </div>
         </section>
@@ -120,12 +124,12 @@
                 <h2>Best by Genre</h2>
             </div>
             <div class="filters-container">
-                <a id="Action" class="filters" href="">Action</a>
-                <a id="Adventure" class="filters" href="">Adventure</a>
-                <a id="Sports" class="filters" href="">Sports</a>
-                <a id="RPG" class="filters" href="">RPG</a>
-                <a id="Shooter" class="filters" href="">Shooter</a>
-                <a id="Multiplayer" class="filters" href="">Multiplayer</a>
+                <a id="Action" class="filters" href="project.html">Action</a>
+                <a id="Adventure" class="filters" href="project.html">Adventure</a>
+                <a id="Sports" class="filters" href="project.html">Sports</a>
+                <a id="RPG" class="filters" href="project.html">RPG</a>
+                <a id="Shooter" class="filters" href="project.html">Shooter</a>
+                <a id="Multiplayer" class="filters" href="project.html">Multiplayer</a>
             </div>
             <div id="genreRated" class="genreRated-container"></div>
         </section>

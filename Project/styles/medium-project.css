@@ -54,9 +54,6 @@
 
     .hero-section {
         height: 250px;
-        background-image: url("../images/large-hero.webp");
-        background-size: cover;
-        background-position: center;
     }
 
     .genreRated-container {

@@ -191,6 +191,6 @@ shooterLink.addEventListener("click", async (e) => {
 
 multiplayerLink.addEventListener("click", async (e) => {
   e.preventDefault();
-  const multiplayerGames = await fetchByGenre(16);
+  const multiplayerGames = await fetchByGenre(59);
   displayByGenre(multiplayerGames, "Multiplayer");
 });
