@@ -1,6 +1,7 @@
 // Subscribe form JavaScript
 import { initNavigation, initFooter } from "./navigationModule.js";
 
+// Initialize navigation and footer
 initNavigation();
 initFooter();
 

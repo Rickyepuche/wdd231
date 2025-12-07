@@ -8,6 +8,13 @@ initFooter();
 initScrollButtons();
 initGameModal();
 
+//  VISIT COUNTER ====================
+let visitCount = localStorage.getItem('gameverse_visits') ? parseInt(localStorage.getItem('gameverse_visits')) : 0;
+
+visitCount++;
+localStorage.setItem('gameverse_visits', visitCount);
+
+console.log(`📊 You have visited GameVerse ${visitCount} time(s)!`);
 
 const apiKey = "00e0d38538cc401cb85a3aea150e066b";
 let allGames = [];
@@ -34,7 +41,7 @@ initPage();
 
 // ========== FETCH FOR NEW RELEASES ==========
 async function fetchNewReleases() {
-  const url = `https://api.rawg.io/api/games?key=${apiKey}&ordering=-released&page_size=20`;
+  const url = `https://api.rawg.io/api/games?key=${apiKey}&ordering=-released&page_size=25`;
   try {
     const response = await fetch(url);
     if (response.ok) {
@@ -49,7 +56,7 @@ async function fetchNewReleases() {
 
 // ========== FETCH FOR BEST RATED ==========
 async function fetchBestRated() {
-  const url = `https://api.rawg.io/api/games?key=${apiKey}&ordering=-rating&page_size=20`;
+  const url = `https://api.rawg.io/api/games?key=${apiKey}&ordering=-rating&page_size=25`;
   try {
     const response = await fetch(url);
     if (response.ok) {
@@ -64,16 +71,16 @@ async function fetchBestRated() {
 
 // ========== FETCH FOR SPECIFIC GENRE ==========
 async function fetchByGenre(genreId) {
-  const url = `https://api.rawg.io/api/games?key=${apiKey}&genres=${genreId}&page_size=12`;
-  try {
-    const response = await fetch(url);
-    if (response.ok) {
-      const data = await response.json();
-      return data.results;
+    const url = `https://api.rawg.io/api/games?key=${apiKey}&genres=${genreId}&page_size=15`;
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+        const data = await response.json();
+        return data.results;
+        }
+    } catch (error) {
+        console.log("Genre error:", error);
     }
-  } catch (error) {
-    console.log("Genre error:", error);
-  }
 }
 
 // ==================== DISPLAY FUNCTIONS ========================
@@ -87,7 +94,7 @@ function displayBestRated(games) {
         .map(
         (game) => `
             <a href="#">    
-            <div class="game-card" data-game="${JSON.stringify(game).replace(/"/g, '&quot;')}">
+            <div id="game-card2" class="game-card" data-game="${JSON.stringify(game).replace(/"/g, '&quot;')}">
                     <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}" loading="lazy">
                     <h3>${game.name}</h3>
                     <p>Rating: ⭐ ${game.rating}</p>
@@ -130,7 +137,7 @@ function displayNewReleases(games) {
     .map(
       (game) => `
         <a href="#">
-        <div class="game-card" data-game="${JSON.stringify(game).replace(/"/g, '&quot;')}">
+        <div id="game-card2" class="game-card" data-game="${JSON.stringify(game).replace(/"/g, '&quot;')}">
                 <img src="${game.background_image||"images/placeholder.webp"}" alt="${game.name}" loading="lazy">
                 <h3>${game.name}</h3>
                 <p>Released: ${game.released}</p>

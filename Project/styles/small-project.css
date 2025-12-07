@@ -7,12 +7,15 @@
 :root{
     --secondary-font: "Tourney", sans-serif;
     --primary-font: Roboto, sans-serif;
+    --header-font: "Audiowide", sans-serif;
 
-    --primary: #2d6a4f; /* Hunter Green */
+    --primary: #234f3b; /* dark Green */
     --secondary: #40916c; /* Sea Green */
     --accent: #74c69d; /* Mint Leaf */
     --light-bg: #e8f2e9; /* Frosted Mint */
     --dark: #081c15; /* Carbon Black */
+    --text: #ffffff;
+    --text2: rgb(1, 52, 1);
 }
 
 body {
@@ -29,7 +32,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    color: white;
+    color: var(--text);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -38,15 +41,22 @@ body {
 }
 
 .logo {
-    font-family: "Audiowide", sans-serif;
+    font-family: var(--header-font);
     font-size: 20px;
     font-weight: 700;
-    color: white;
+    color: var(--text);
     flex: 0.9;
 }
 
 .silent-links {
     display: none;
+    font-family: var(--header-font);
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--text);
+}
+.silent-links:hover {
+    text-decoration-line: underline;
 }
 
 .hamburger {
@@ -97,11 +107,12 @@ body {
 }
 
 .subscribe-btn {
-    background: var(--accent);
-    color: black;
+    background: #0056b3;
+    color: white;
     text-decoration: none;
     padding: 8px 14px;
     border-radius: 6px;
+    font-family: var(--header-font);
     font-weight: 600;
     font-size: 14px;
     transition: background-color 0.3s ease;
@@ -117,7 +128,7 @@ body {
 }
 
 .subscribe-btn:hover {
-    background: #0056b3;
+    background: var(--accent);
 }
 
 
@@ -227,6 +238,7 @@ body {
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
+    font-family: var(--header-font);
     border-radius: 6px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -237,7 +249,7 @@ body {
 }
 
 .side-menu-link.subscribe-link {
-    background: #007bff;
+    background: #0056b3;
     color: white;
     text-align: center;
     margin-top: 10px;
@@ -511,7 +523,7 @@ footer {
     padding: 2rem 1rem;
     text-align: center;
     background-color: var(--primary);
-    color: white;
+    color: var(--text);
     margin-top: 2rem;
 }
 
@@ -533,7 +545,7 @@ footer p {
 footer a {
     display: inline-block;
     margin: 0.5rem;
-    color: white;
+    color: var(--text);
     text-decoration: none;
     transition: transform 0.3s, opacity 0.3s;
 }
@@ -594,25 +606,35 @@ footer svg {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.game-card img {
+#game-card2 {
+    background: white;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 16.63rem;
+    overflow: hidden;
+    box-shadow: 0 5px 8px var(--accent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card img, #game-card2 img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.game-card h3 {
+.game-card h3, #game-card2 h3 {
     padding: 0.5rem;
     font-size: 1rem;
     color: var(--dark);
 }
 
-.game-card p {
+.game-card p, #game-card2 p {
     padding: 0 0.5rem 0.5rem 0.5rem;
     font-size: 0.9rem;
-    color: var(--secondary);
+    color: var(--text2);
 }
 
-.game-card:hover {
+.game-card:hover, #game-card2:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -635,10 +657,12 @@ footer svg {
     margin-top: 10px;
     margin-bottom: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 12px;
 }
+
+
 
 .games-container a {
     text-decoration: none;
@@ -655,10 +679,11 @@ footer svg {
 .filters{
     padding: 8px 12px;
     background-color: var(--primary);
-    color: white;
+    color: var(--text);
     text-decoration: none;
     border-radius: 6px;
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: bolder;
     transition: background-color 0.3s ease;
 }
 
@@ -693,7 +718,7 @@ footer svg {
     top: 16px;
     right: 16px;
     background: var(--primary);
-    color: white;
+    color: var(--text);
     border: none;
     width: 36px;
     height: 36px;
@@ -809,3 +834,119 @@ footer svg {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+
+/* THANK YOU PAGE STYLES */
+
+.thankyou-container {
+    max-width: 48.5rem;
+    margin: 2rem auto;
+    padding: 0 0.6rem;
+}
+
+.thankyou-message {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--primary-color);
+}
+
+.thankyou-message h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.thankyou-message p {
+    font-size: 1.1rem;
+    color: black;
+    margin: 0.8rem 0;
+}
+
+.submission-details {
+    background-color: var(--accents-color);
+    padding: 2rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.submission-details h2 {
+    background: none;
+    color: var(--primary-color);
+    text-align: left;
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.detail-item {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 4px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.detail-item label {
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.detail-item p {
+    color: black;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.cta-section {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cta-section p {
+    color: black;
+    margin: 0.8rem 0;
+}
+
+.cta-section strong {
+    color: var(--primary-color);
+}
+
+.back-home-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary);
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-home-btn:hover {
+    background-color: #003a5a;
+}
+
+@media (min-width: 200px) and (max-width: 375px) {
+    .membership-form input,
+    .membership-form select,
+    .membership-form textarea {
+        margin-top: 0.4rem;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: var(--main-font);
+        font-size: 0.75rem;
+        background-color: white;
+        color: black;
+    }
+}

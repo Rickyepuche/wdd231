@@ -48,7 +48,6 @@
         display: block;
         margin-right: 20px;
         font-size: 18px;
-        color: white;
         text-decoration: none;
     }
 
@@ -198,5 +197,11 @@
         grid-template-rows: auto;
         margin-left: 20px;
     margin-right: 20px;
+    }
+
+
+    .game-card2 {
+        width: 18.8rem;
+        
     }
 }

@@ -41,7 +41,7 @@ export function initNavigation() {
         searchInput.focus();
     });
 
-    // Handle search submission - Navigate to games.html with search query
+    // Handle search submission and Navigate to games.html with search query
     searchSubmit.addEventListener("click", () => {
         const searchQuery = searchInput.value.trim();
         

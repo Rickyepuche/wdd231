@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="styles/small-project.css">
     <link rel="stylesheet" href="styles/medium-project.css">
     <link rel="stylesheet" href="styles/large-project.css">
-    <script type="module" src="scripts/project.js"></script>
+    <script type="module" src="scripts/thankyou.js"></script>
 </head>
 <body>
     <header>
@@ -88,58 +88,43 @@
         <div id="overlay" class="overlay"></div>
     </header>
     <main>
-        <section class="subscribe-container">
-            <div class="subscribe-header">
-                <h1>Join GameVerse</h1>
-                <p>Subscribe to get exclusive game recommendations and the latest updates</p>
+        <section class="thankyou-container">
+            <div class="thankyou-message">
+                <h1>Thank You!</h1>
+                <p>Your subscription has been received successfully.</p>
+                <p>You can now review games and recieve weekly updates on new game releases.</p>
             </div>
-            
-            <form class="subscribe-form" method="get" action="thankyou.html">
-                <fieldset>
-                    <legend>Subscribe to our website</legend>
-                    
-                    <label for="first-name">
-                        First Name
-                        <input 
-                            type="text" 
-                            id="first-name" 
-                            name="fname" 
-                            title="First Name" 
-                            autocomplete="given-name" 
-                            required>
-                    </label>
 
-                    <label for="last-name">
-                        Last Name
-                        <input 
-                            type="text" 
-                            id="last-name" 
-                            name="lname" 
-                            title="Last Name" 
-                            autocomplete="family-name" 
-                            required>
-                    </label>
+            <section class="submission-details">
+                <h2>Subscription Details</h2>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <label>First Name:</label>
+                        <p id="display-fname"></p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Last Name:</label>
+                        <p id="display-lname"></p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Email:</label>
+                        <p id="display-email"></p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Subscribed At:</label>
+                        <p id="display-timestamp"></p>
+                    </div>
+                </div>
+            </section>
 
-                    <label for="email">
-                        Email Address
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            title="Email Address" 
-                            autocomplete="email" 
-                            placeholder="example@business.com" 
-                            required>
-                    </label>
-
-                    <input type="hidden" id="timestamp" name="timestamp">
-
-                    <button type="submit" class="submit-btn">Subscribe</button>
-                </fieldset>
-            </form>
+            <div class="cta-section">
+                <p>If you have any questions, please contact us:</p>
+                <p><strong>Email:</strong> GameVerse@gmail.com</p>
+                <p><strong>Phone:</strong> +234 801 234 5678</p>
+                <a href="project.html" class="back-home-btn">Return to Home</a>
+            </div>
         </section>
     </main>
-    
     <footer>
         <div class="footer1">
             <div class="logo">GameVerse</div>
@@ -169,10 +154,9 @@
             <div><a href="https://www.loom.com/share/1143f1e517574ed1a88724b0cd4d5ffe">Video demonstration</a></div>
             <div><a href="https://rawg.io/" target="_blank" rel="noopener noreferrer">RAWG API</a></div>
 
+
             <p id="lastModified"></p>
         </div>
     </footer>
-    
-    <script type="module" src="scripts/subscribe.js"></script>
 </body>
 </html>
